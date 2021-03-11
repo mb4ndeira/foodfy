@@ -1,0 +1,40 @@
+{% extends "./layout.njk" %}
+
+{% block h %}
+    <a href="/about">Sobre</a>
+    <a href="/recipes" class="active">Receitas</a>
+    <a href="/chefs">Chefs</a>
+    <form action="/" method="POST">
+        <input type="text" name="search" placeholder="Buscar uma receita" value="{{search}}">
+        <button class="btn" type="submit">Buscar</button>
+    </form>
+{% endblock h %}
+
+{% block c %}
+    <section class="recipes">
+
+        {% for item in items %}
+            <div class="recipe_container container" id="{{item.id}}">
+                <div class="container_image">
+                    {% for image in images %}
+                        {% if image.recipe_id == item.id %}
+                            <img src="{{image.src}}" alt="">
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="container_text">
+                    <h3 class="container_title">{{item.title}}</h3>
+                    <p class="container_text">por
+                        {% for chef in chefs %}
+                            {%if item.chef_id == chef.id%}
+                                {{chef.name}}
+                                {%endif%}
+                                {%endfor%}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </section>
+
+        {% endblock %}

@@ -1,0 +1,15 @@
+<section class="form wrapper">
+    <div class="field_container">
+        <h3>Email</h3>
+        <input type="email" onclick="defaultBorder(event)" placeholder="Digite o email" name="email" class="field" value="{{items.email}}">
+    </div>
+    <div class="field_container">
+        <h3>Nova Senha</h3>
+        <input type="password" onclick="defaultBorder(event)" placeholder="Digite sua nova senha" name="password" class="field">
+    </div>
+    <div class="field_container">
+        <h3>Repetir Senha</h3>
+        <input type="password" onclick="defaultBorder(event)" placeholder="Repita sua nova  senha" name="password_repeat" class="field">
+    </div>
+    <input type="hidden" name="token" value="{{token}}">
+</section>

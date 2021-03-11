@@ -1,0 +1,35 @@
+{% extends "../layout.njk" %}
+
+{%block h%}
+    <a href="/admin/recipes" class="">RECEITAS</a>
+    <a href="/admin/chefs" class="">CHEFS</a>
+    <a href="#" class="active">USUÁRIOS</a>
+{% endblock %}
+
+{% block c %}
+    <div id="users_wrapper">
+        <div class="head">
+            <h1 id="maintitle">Usuários</h1>
+            <a href="/admin/users/create" class="btn">Novo</a>
+        </div>
+        <section class="users list">
+            {% for item in items %}
+                <div class="user_container" id="{{item.id}}">
+                    <div class="container_text">
+                        <h3>{{item.name}}</h3>
+                        <p>{{item.email}}</p>
+                        <div class="buttons">
+                            <a href="/admin/users/edit/{{item.id}}">Editar</a>
+                            <form action="/admin/users/{{item.id}}?_method=DELETE" method="POST">
+                                <button type="submit">Deletar</button>
+                                <input type="hidden" name="id" value="{{items.id}}">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </section>
+    </div>
+
+{% endblock %}

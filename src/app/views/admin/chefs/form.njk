@@ -1,0 +1,18 @@
+<section class="form wrapper">
+    <div class="field_container">
+        <h3>Nome</h3>
+        <input type="text" name="name" class="field" value="{{items.name}}">
+    </div>
+    <div class="field_container">
+        <h3>Avatar {{image.id}}</h3>
+        {% if edit %}
+            <input type="text" class="field url_holder" value="{{image[0].src}}">
+            <input type="hidden" value="{{image[0].id}}" name="removed_file">
+        {% endif %}
+        <div class="avatar">
+            <div class="button">Enviar Avatar</div>
+            <input type="file" name="image" onchange="photosUpload.inputAdd(event,'chefs')" accept="image/*">
+        </div>
+    </div>
+
+</section>

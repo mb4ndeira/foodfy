@@ -1,0 +1,22 @@
+{% extends './layout.njk' %}
+
+{%block h%}
+    <a href="/admin/recipes" class="">RECEITAS</a>
+    <a href="/admin/chefs" class="active">CHEFS</a>
+    <a href="/admin/users" class="">USUÁRIOS</a>
+{% endblock %}
+
+{% block c %}
+    <div class="animation_page">
+        <div class="lottie"></div>
+        <h2>{{thing}}
+            {{action}}
+            com sucesso</h2>
+    </div>
+
+    <script src="/public/lottie.min.js"></script>
+    <script>
+        const element = document.querySelector('.lottie')
+        lottie.loadAnimation({container: element, renderer: 'svg', loop: false, autoplay: true, path: '/public/check.json'})
+    </script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "../layout.njk" %}
+
+{%block h%}
+    <a href="" class="active">RECEITAS</a>
+    <a href="/admin/chefs" class="">CHEFS</a>
+    <a href="/admin/users" class="">USUÁRIOS</a>
+{% endblock %}
+
+{% block c %}
+    <div id="recipes_wrapper">
+        <div class="head">
+            <h1 id="maintitle">Receitas</h1>
+            <a href="/admin/recipes/create" class="btn">Novo</a>
+        </div>
+
+        <section class="recipes">
+            {% for item in items %}
+                <div class="recipe_container container" id="{{item.id}}">
+                    <div class="container_image">
+                        {% for image in images %}
+                            {% if image.recipe_id == item.id %}
+                                <img src="{{image.src}}" alt="">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="container_text">
+                        <h3>{{item.title}}</h3>
+                        <p>
+                            {% for chef in chefs %}
+                                {%if item.chef_id == chef.id%}{{chef.name}}{%endif%}
+                                    {%endfor%}
+                                </p>
+                                <a href="/admin/recipes/{{item.id}}">Visualizar</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </section>
+            </div>
+
+        {% endblock %}
