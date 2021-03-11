@@ -1,0 +1,35 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foodfy</title>
+        {% include "../styles.njk" %}
+    </head>
+
+    {% include "../messages.njk" %}
+
+    <body class="admin">
+        <nav>
+            <a href="/admin" class="logo"><img src="../../../public/assets/adminlogo.png" alt=""></a>
+            <div class="links">
+                {%block h%}{% endblock %}
+            </div>
+            <div class="logout">
+                <form action="/logout" method="POST">
+                    <button type="submit">SAIR</button>
+                </form>
+            </div>
+        </nav>
+
+        <main>
+
+            {% block c %}{% endblock %}
+
+        </main>
+
+        <script src="../../../public/scripts.js"></script>
+
+    </body>
+
+</html>

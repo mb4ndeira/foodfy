@@ -1,0 +1,26 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foodfy</title>
+        {% include "../styles.njk" %}
+    </head>
+
+    {% include "../messages.njk" %}
+
+    <body class="session">
+
+        <nav>
+            <a href="/" class="logo"><img src="../public/assets/logo.png" alt=""></a>
+        </nav>
+        <main>
+            {% block c %}{% endblock %}
+        </main>
+        <footer>
+            <p>Todos os direitos reservados, receitas Foodfy.</p>
+        </footer>
+        <script src="../public/scripts.js"></script>
+    </body>
+
+</html>

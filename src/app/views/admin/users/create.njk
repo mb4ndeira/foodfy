@@ -1,0 +1,24 @@
+{% extends '../layout.njk' %}
+
+{%block h%}
+    <a href="/admin/recipes">RECEITAS</a>
+    <a href="/admin/chefs" class="">CHEFS</a>
+    <a href="/admin/users" class="active">USUÁRIOS</a>
+{% endblock %}
+
+{% block c %}
+
+    <form class="users" action="/admin/users" method="POST">
+        <section class="head">
+            <h2>Criar Usuário</h2>
+            <div class="buttons">
+                <button class="btn" type="submit">Salvar</button>
+                <a href="/admin/users" class="btn cancel">Cancelar</a>
+            </div>
+        </section>
+
+        {% include "./form.njk" %}
+
+    </form>
+
+{% endblock %}

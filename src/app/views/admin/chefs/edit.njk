@@ -1,0 +1,32 @@
+{% extends '../layout.njk' %}
+
+{%block h%}
+    <a href="/admin/recipes" class="">RECEITAS</a>
+    <a href="/admin/chefs" class="active">CHEFS</a>
+    <a href="/admin/users" class="">USUÁRIOS</a>
+{% endblock %}
+
+{% block c %}
+    <div class="chef">
+        <section class="head ">
+            <h2>Editando chef</h2>
+            <div class="buttons">
+
+                <form action="/admin/chefs?_method=DELETE" method="POST">
+                    <button class="btn delete" type="submit">Deletar</button>
+                    <input type="hidden" name="id" value="{{items.id}}">
+                    <input id="test" type="hidden" name="count" value="{{count}}">
+                    <input type="hidden" value="{{image[0].id}}" name="file_id">
+                </form>
+
+                <form action="/admin/chefs?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <button class="btn" type="submit">Salvar chef</button>
+                    <input type="hidden" name="id" value="{{items.id}}">
+                </div>
+            </section>
+
+            {% include "./form.njk" %}
+
+        </form>
+    </div>
+{% endblock %}

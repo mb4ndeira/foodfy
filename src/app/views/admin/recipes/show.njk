@@ -1,0 +1,86 @@
+{% extends '../layout.njk' %}
+
+{%block h%}
+    <a href="/admin/recipes" class="active">RECEITAS</a>
+    <a href="/admin/chefs" class="">CHEFS</a>
+    <a href="/admin/users" class="">USUÁRIOS</a>
+{% endblock %}
+
+{% block c %}
+
+    <section class="head">
+        <h2>Receita:
+            {{items.title}}</h2>
+        <div class="buttons">
+            <a href="/admin/recipes/{{items.id}}/edit" class="btn">Editar receita</a>
+        </div>
+    </section>
+
+    <section class="presentation">
+        <div class="presentation_image">
+            <img src="{{images[0].src}}" alt="" class="highlight">
+            <div class="preview">
+                {% for image in images %}
+                    <img src="{{image.src}}" alt="" {% if loop.index0 == 0 %} class="active" {% endif %} onclick="gallery.highlight(event)">
+                {% endfor %}
+            </div>
+        </div>
+        <div class="presentation_titles">
+            <h1>{{items.title}}</h1>
+            <h3>por
+                {{items.name}}
+            </h3>
+        </div>
+    </section>
+
+    <section class="description">
+
+        <div class="section">
+            <div class="titlebutton">
+                <h2>Ingredientes</h2>
+
+            </div>
+            <div class="section_text">
+                <ul>
+
+                    {% for ingredient in items.ingredients %}
+                        <li>
+                            <p>{{ingredient}}</p>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="titlebutton">
+                <h2>Modo de Preparo</h2>
+
+            </div>
+            <div class="section_text">
+                <ul>
+
+                    {% for step in items.preparation %}
+                        <li>
+                            <p>{{step}}</p>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+
+        {% if items.information %}
+            <div class="section">
+                <div class="titlebutton">
+                    <h2>Informações Adicionais</h2>
+                </div>
+                <div class="section_text">
+                    <p>{{items.information}}</p>
+                </div>
+                {%else%}
+            {% endif %}
+
+        </section>
+
+    {% endblock %}

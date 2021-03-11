@@ -1,0 +1,15 @@
+{% extends './layout.njk' %}
+
+{% block c %}
+    <h2>Nova senha</h2>
+    <form {% if error %} class="error" {% endif %} action="/reset" method="POST">
+
+        {% include "./reset_form.njk" %}
+
+        <div class="buttons">
+            <button class="btn" type="submit">Nova senha</button>
+        </div>
+
+    </form>
+
+{% endblock %}

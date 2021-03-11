@@ -1,0 +1,30 @@
+{% extends '../layout.njk' %}
+
+{%block h%}
+    <a href="/admin/recipes">RECEITAS</a>
+    <a href="/admin/chefs" class="">CHEFS</a>
+    <a href="/admin/users" class="active">USUÁRIOS</a>
+{% endblock %}
+
+{% block c %}
+
+    <section class="head">
+        <h2>Atualizar Usuário</h2>
+        <div class="buttons">
+            <form action="/admin/users/{{items.id}}?_method=DELETE" method="POST">
+                <button class="btn delete" type="submit">Deletar</button>
+                <input type="hidden" name="id" value="{{items.id}}">
+            </form>
+
+            <form action="/admin/users?_method=PUT" method="POST">
+                <button class="btn" type="submit">Salvar</button>
+                <input type="hidden" name="id" value="{{items.id}}">
+            </div>
+        </div>
+    </section>
+
+    {% include "./form.njk" %}
+
+</form>
+
+{% endblock %}

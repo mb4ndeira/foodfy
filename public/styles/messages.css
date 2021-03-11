@@ -1,0 +1,40 @@
+@keyframes hidemessage {
+    0% {
+        opacity: 0;
+    }
+    6.25% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+        top: 0;
+    }
+    100% {
+        top: -50px;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.messages {
+    z-index: 101;
+    position: absolute;
+    margin: 15px;
+    top: 0;
+    right: 0;
+    width: 345px;
+    height: 135px;
+    background: #01B12A;
+    border-radius: 4px;
+    font-size: 16.5px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: hidemessage 4s ease-out forwards;
+}
+
+.messages.error {
+    background: #DC4747;
+}

@@ -1,0 +1,74 @@
+.head #maintitle {
+    margin: 0;
+}
+
+.buttons .cancel {
+    background-color: #8A8A8A;
+    border-radius: 4px;
+    margin-left: 15px;
+}
+
+.users {
+    margin-top: 60px;
+}
+
+section.users.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 20px;
+}
+
+.users.form {
+    margin-top: 60px;
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.users .btn, .btn.delete {
+    width: 139px;
+}
+
+input[type='radio'] {
+    cursor: pointer;
+}
+
+.field_container.select {
+    display: flex;
+    flex-direction: row;
+}
+
+.field_container.select input {
+    transform: translateY(2px);
+    margin-right: 8px;
+}
+
+.user_container h3 {
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 4px;
+}
+
+.user_container p {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 16px;
+}
+
+.user_container .buttons {
+    display: flex;
+}
+
+.user_container .buttons button {
+    background: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #F55A5A;
+    margin-left: 16px;
+}
+
+.user_container .buttons a {
+    font-size: 14px;
+    color: #6558C3;
+}

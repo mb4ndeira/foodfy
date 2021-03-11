@@ -1,0 +1,16 @@
+{% extends './layout.njk' %}
+
+{% block c %}
+    <h2>Iniciar Sessão</h2>
+    <form {% if error %} class="error" {% endif %} action="/login" method="POST">
+
+        {% include "./login_form.njk" %}
+
+        <div class="buttons">
+            <a href="/forgot">Perdeu a senha?</a>
+            <button class="btn" type="submit">Acessar</button>
+        </div>
+
+    </form>
+
+{% endblock %}

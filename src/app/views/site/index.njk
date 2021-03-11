@@ -1,0 +1,76 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foodfy</title>
+        <link rel="stylesheet" href="public/style.css">
+
+    </head>
+
+    <body>
+        <nav>
+            <a href="/" class="logo"><img src="public/assets/logo.png" alt=""></a>
+            <div class="menu">
+                <a href="/about">Sobre</a>
+                <a href="/recipes">Receitas</a>
+                <a href="/chefs">Chefs</a>
+            </div>
+            <div class="search">
+                <form action="/" method="POST">
+                    <input type="text" name="search" placeholder="Buscar uma receita">
+                    <button class="btn" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+
+        <main>
+            <section class="banner">
+                <div class="banner_text">
+                    <h1>As melhores receitas</h1>
+                    <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro</p>
+                </div>
+                <div class="banner_img">
+                    <img id="chef" src="public/assets/chef.png" alt="">
+                </div>
+            </section>
+
+            <h2 id="toprecipe_title">Mais acessadas</h2>
+
+            <section class="toprecipes">
+
+                {% for item in items %}
+                    <div class="recipe_container container" id="{{item.id}}">
+                        <div class="container_image">
+                            {% for image in images %}
+                                {% if image.recipe_id == item.id %}
+                                    <img src="{{image.src}}" alt="">
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="container_text">
+                            <h3 class="container_title">{{item.title}}</h3>
+                            <p class="container_text">por
+                                {% for chef in chefs %}
+                                    {% if item.chef_id == chef.id %}
+                                        {{chef.name}}
+                                    {% endif %}
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Todos os direitos reservados, receitas Foodfy.</p>
+        </footer>
+
+        <script src="public/scripts.js"></script>
+
+    </body>
+
+</html>

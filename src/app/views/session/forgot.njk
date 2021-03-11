@@ -1,0 +1,20 @@
+{% extends './layout.njk' %}
+
+{% block c %}
+    <h2>Esqueceu a senha?</h2>
+    <form action="/forgot" method="POST">
+
+        <section class="form wrapper">
+            <div class="field_container">
+                <h3>Email</h3>
+                <input type="email" placeholder="Digite o seu email para recuperar sua senha" name="email" class="field" value="{{items.email}}">
+            </div>
+        </section>
+
+        <div class="buttons">
+            <button class="btn" type="submit">Recuperar</button>
+        </div>
+
+    </form>
+
+{% endblock %}
