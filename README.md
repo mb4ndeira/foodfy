@@ -40,7 +40,7 @@
 
 <br>
 
-## 📷: Preview ##
+## 📷 Preview ##
 
 <img src="public/assets/preview1.png" alt="ShowRecipe" />
 
