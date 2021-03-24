@@ -30,8 +30,8 @@
 <hr> -->
 
 <p align="center">
-  <a href="#rocket-technologies">Preview</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Features</a> &#xa0; | &#xa0;
+  <a href="#rocket-preview">Preview</a> &#xa0; | &#xa0;
+  <a href="#rocket-features">Features</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
@@ -52,10 +52,10 @@
 ## :sparkles: Features ##
 
 :heavy_check_mark: Upload media;\
-:heavy_check_mark: Search recipes;
-:heavy_check_mark: Login system with password recovery;
+:heavy_check_mark: Search recipes;\
+:heavy_check_mark: Login system with password recovery;\
 :heavy_check_mark: Manage recipes, chefs and users;\
-:heavy_check_mark: Admin area;\
+:heavy_check_mark: Admin area;
 
 ## :rocket: Technologies ##
 
