@@ -48,6 +48,14 @@
 
 <img src="public/assets/preview3.png" alt="Showcreate" />
 
+## :sparkles: Features ##
+
+:heavy_check_mark: Upload media;\
+:heavy_check_mark: Search recipes;
+:heavy_check_mark: Login system with password recovery;
+:heavy_check_mark: Manage recipes, chefs and users;\
+:heavy_check_mark: Admin area;\
+
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
