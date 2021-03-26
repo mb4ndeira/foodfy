@@ -1,3 +1,5 @@
+  &#xa0;
+
 <div align="center" id="top"> 
   <img src="public/assets/logo.png" alt="Launchbase_foodfy" />
 
