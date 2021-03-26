@@ -6,13 +6,13 @@
 </div>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/mb4ndeira/launchbase_foodfy?color=f0db4f">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/mb4ndeira/foodfy?color=f0db4f">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/mb4ndeira/launchbase_foodfy?color=f0db4f">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/mb4ndeira/foodfy?color=f0db4f">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/mb4ndeira/launchbase_foodfy?color=fa8072">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/mb4ndeira/foodfy?color=fa8072">
 
-  <img alt="License" src="https://img.shields.io/github/license/mb4ndeira/launchbase_foodfy">
+  <img alt="License" src="https://img.shields.io/github/license/mb4ndeira/foodfy">
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/mb4ndeira/launchbase_foodfy?color=56BEB8" /> -->
 
