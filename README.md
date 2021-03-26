@@ -74,7 +74,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 1. Fork this repository and clone it into the current directory
 
    ```bash
-   git clone https://github.com/mb4ndeira/launchbase_foodfy
+   git clone https://github.com/mb4ndeira/foodfy
    ```
 
 
