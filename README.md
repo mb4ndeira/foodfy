@@ -1,7 +1,7 @@
 <br>
 
 <div align="center" id="top"> 
-  <img src="public/assets/logo.png" alt="Launchbase_foodfy" />
+  <img src="public/assets/logo.png" alt="Foodfy" />
 
   &#xa0;
   
@@ -45,11 +45,11 @@
 
 ## 📷 Preview ##
 
-<img src="public/assets/preview1.png" alt="ShowRecipe" />
+<img src="public/assets/preview1.png" alt="showRecipe" />
 
-<img src="public/assets/preview2.png" alt="ShowHome" />
+<img src="public/assets/preview2.png" alt="showHome" />
 
-<img src="public/assets/preview3.png" alt="Showcreate" />
+<img src="public/assets/preview3.png" alt="showcreate" />
 
 ## :sparkles: Features ##
 
